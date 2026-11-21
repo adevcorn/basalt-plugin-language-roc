@@ -1,0 +1,44 @@
+[pack]
+name = "language-roc"
+version = "0.1.0"
+language = "roc"
+capabilities = [
+    "language@roc/v1",
+    "semantic-facts@roc/v1",
+    "project-model@roc/v1",
+    "lsp@roc/v1",
+    "verify@roc/v1",
+]
+file_globs = ["**/*.roc"]
+supports_in_memory = true
+default_shadow_mode = "minimal"
+
+[[artifact]]
+kind = "parser"
+package = "basalt-roc-parser"
+artifact = "roc_parser.wasm"
+parser_filename = "roc"
+
+[[artifact]]
+kind = "plugin"
+package = "basalt-roc-semantic-facts"
+artifact = "roc_semantic_facts.wasm"
+install_as = "semantic-facts-roc"
+
+[[artifact]]
+kind = "plugin"
+package = "basalt-roc-project-model"
+artifact = "roc_project_model.wasm"
+install_as = "project-model-roc"
+
+[[artifact]]
+kind = "plugin"
+package = "basalt-roc-lsp"
+artifact = "roc_lsp.wasm"
+install_as = "lsp-roc"
+
+[[artifact]]
+kind = "plugin"
+package = "basalt-roc-verify"
+artifact = "roc_verify.wasm"
+install_as = "verify-roc"

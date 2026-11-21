@@ -1,0 +1,8 @@
+[package]
+name = "basalt-roc-verify"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+basalt-roc-semantic-facts = { path = "../semantic-facts" }
