@@ -6,3 +6,5 @@ license.workspace = true
 
 [dependencies]
 basalt-roc-semantic-facts = { path = "../semantic-facts" }
+basalt-plugin-sdk = { path = "../../../basalt-plugin-sdk" }
+wasmtime = "20"
